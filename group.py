@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class Group:
     def __init__(self, class_info):
         # course_remained[语文] = [剩余多少节没有排课, 权重, 课程名称]

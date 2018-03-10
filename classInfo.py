@@ -33,8 +33,8 @@ class ClassInfo:
 
         self.class_distribute['chinese'] = [int(data['chinese']), 4, int(data['classSum'])]
         self.class_distribute['math'] = [int(data['math']), 6, int(data['classSum'])]
-        self.class_distribute['English'] = [int(data['English']), 5, int(data['classSum'])]
-        self.class_distribute['sports'] = [int(data['sports']), 3, int(data['classSum'])]
+        self.class_distribute['english'] = [int(data['english']), 5, int(data['classSum'])]
+        self.class_distribute['sport'] = [int(data['sport']), 3, int(data['classSum'])]
         self.class_distribute['music'] = [int(data['music']), 2, int(data['classSum'])]
         self.class_distribute['art'] = [int(data['art']), 1, int(data['classSum'])]
 
