@@ -33,7 +33,6 @@ def create_course():
     class_info = request.json['courseInfo']
 
     g_class_sum.append(int(class_sum))
-    print class_info
     engine.append(Engine(assemble_data(class_sum, class_info)))
     engine[0].start_engine()
     return jsonify({'status': 'ok'}), 201
