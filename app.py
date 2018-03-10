@@ -32,6 +32,8 @@ def create_course():
     class_sum = request.json['classNumber']
     class_info = request.json['courseInfo']
 
+    g_class_sum = []
+    engine = []
     g_class_sum.append(int(class_sum))
     engine.append(Engine(assemble_data(class_sum, class_info)))
     engine[0].start_engine()
@@ -59,7 +61,6 @@ def search(file_name):
         if file_name == engine[0].grade[i].class_data:
             return jsonify({'file': file_name, 'classIndex': i + 1}), 200
     return jsonify({'file': file_name, 'classIndex': -1}), 200
-
 
 if __name__ == '__main__':
     app.run(debug=True)
