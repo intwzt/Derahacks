@@ -53,15 +53,12 @@ def get_course_data(course_id):
     return jsonify({'file': file_name})
 
 
-@app.route('/api/search', methods=['POST'])
-def search():
-    if not request.json or not 'fileName' in request.json:
-        abort(400)
-    key = request.json['fileName']
+@app.route('/api/search/<string:file_name>', methods=['GET'])
+def search(file_name):
     for i in range(g_class_sum[0]):
-        if key == engine[0].grade[i].class_data:
-            return jsonify({'file': key, 'classIndex': i + 1}), 200
-    return jsonify({'file': key, 'classIndex': -1}), 200
+        if file_name == engine[0].grade[i].class_data:
+            return jsonify({'file': file_name, 'classIndex': i + 1}), 200
+    return jsonify({'file': file_name, 'classIndex': -1}), 200
 
 
 if __name__ == '__main__':
