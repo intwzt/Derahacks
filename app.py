@@ -21,7 +21,7 @@ def assemble_data(class_sum, class_info):
 def get_course(course_id):
     class_table = engine[0].grade[int(course_id)].course_table
     data = {'classNumber': g_class_sum[0], 'classTable': class_table}
-    return jsonify(result=data)
+    return jsonify(data)
 
 
 @app.route('/api/course/go', methods=['POST'])
