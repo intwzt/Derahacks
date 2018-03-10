@@ -1,5 +1,5 @@
-# install flash
-pip install flash
+# install flask
+pip install flask
 
 # install flask-cors
 pip install -U flask-cors
