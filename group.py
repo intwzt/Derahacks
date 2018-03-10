@@ -7,7 +7,6 @@ class Group:
         self.course_remained = {}
         # 班级数据
         self.class_data = ''
-
         # 课程表矩阵
         self.course_table = [[''] * 5 for i in range(8)]
 
@@ -15,7 +14,7 @@ class Group:
             self.course_remained[k] = [v[0], v[1], k]
 
     def print_course_remained(self, index):
-        print '班级'+ str(index), ': 课程', '剩余数量', '权重', '课程名称'
+        print '班级' + str(index), ': 课程', '剩余数量', '权重', '课程名称'
         for k, v in self.course_remained.iteritems():
             print k, v
 
